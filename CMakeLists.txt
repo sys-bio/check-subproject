@@ -27,11 +27,11 @@ include(CheckCCompilerFlag)
 # Detect if Check is being used in another build as a subproject
 # probably with command FetchContent*().
 set(THIS_IS_SUBPROJECT FALSE)
-if(DEFINED PROJECT_NAME)
-  set(THIS_IS_SUBPROJECT TRUE)
-  message(STATUS "Turned off installing because Check is a subproject.")
-  message(STATUS "Turned off building tests because Check is a subproject.")
-endif()
+#if(DEFINED PROJECT_NAME)
+#  set(THIS_IS_SUBPROJECT TRUE)
+#  message(STATUS "Turned off installing because Check is a subproject.")
+#  message(STATUS "Turned off building tests because Check is a subproject.")
+#endif()
 
 if(POLICY CMP0090)
   # export(PACKAGE) does not populate package registry by default. (NEW)
